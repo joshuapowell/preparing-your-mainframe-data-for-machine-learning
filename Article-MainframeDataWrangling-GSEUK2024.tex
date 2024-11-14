@@ -1,0 +1,252 @@
+\documentclass[a4paper]{article}
+
+\usepackage{StyleGuide}
+
+\title{Mainframe Data Wrangling: Preparing Your Data for Use in Machine Learning Models }
+
+\author{Joshua Powell \\
+  Pittsburgh, PA \\
+  {\tt joshua.powell@broadcom.com} \\}
+
+\institution{Broadcom}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    Mainframe computing continues to drive the global economy, with forty-five of the world's top fifty banks [1] handling critical transaction data through the IBM Z mainframe platform. While recent research highlights the importance of mainframe modernization rather than replacement [2], enterprises struggle to effectively utilize mainframe data for automation and optimization due to data-driven and communication-driven failures [3]. This challenge creates a significant gap between available mainframe capabilities and realized business value [4].
+
+    To address this gap, we conducted semi-structured interviews with eighteen participants across three roles: mainframe subject   matter experts (SME) [n=6], mainframe individual contributor end-users [n=9], and mainframe people manager end-users [n=3]. The study, conducted between [dates], investigated two research questions: [RQ1] What are the primary use cases in which mainframe network and network security data impacts mean-time-to-resolution (MTTR) in top fifty banks? And [RQ2] What mainframe data sources and methods do end-users employ to resolve these network and network security issues?
+    
+    Analysis revealed that 91\% of participants [5] encountered data quality or completeness issues that impeded network problem resolution. This tutorial demonstrates how end-users can leverage exploratory data analysis techniques [6], mainframe data APIs [7], and open source data science tools [8] to prepare data for advanced analytics and machine learning applications. The presented methodology aims to reduce MTTR by addressing identified data-driven and communication-driven failure points [9], with specific focus on network security use cases [10-13].
+\end{abstract}
+
+\textbf{Keywords: }Data Engineering, Data Wrangling, API Usability, API Onboarding, Mainframe, Large-scale Computing, Machine Learning
+
+\section{Tutorial Aims and Objectives}
+    Data wrangling enables organizations to transform raw mainframe data into actionable insights that can reduce mean-time-to-resolution (MTTR) in critical banking operations [5]. This tutorial addresses the challenges identified through our research with eighteen mainframe professionals across three roles: SMEs, individual contributors, and people managers.
+
+\subsection{Stakeholder Communication \& Understanding}
+    Our research revealed that teams often begin building solutions before fully understanding stakeholder requirements or establishing effective communication channels [3]. This tutorial presents two user experience research methods specifically designed to:
+    \begin{itemize}
+        \item Clarify stakeholder goals in network security contexts
+        \item Improve collaboration between technical and business teams
+        \item Address the communication-driven failures identified in our research
+    \end{itemize}
+
+\subsection{Data Quality}
+    With 91\% of studied mainframe professionals reporting data quality challenges, establishing high-quality data is crucial for reliable business decision-making and problem-solving [7]. This criticality increases when augmenting operations with artificial intelligence. The tutorial provides:
+    
+    \begin{itemize}
+        \item Tools and techniques for improving mainframe network data quality
+        \item Prepare: Methods for preparing data
+        \item Explore: Approaches for maintaining data integrity during transformation
+        \item Visualize: Techniques for meaningful visualization
+    \end{itemize}
+    
+    The tutorial's primary objective is to address the data-driven and communication-driven failures identified in our research by:
+    
+    \begin{itemize}
+        \item Introducing open-source tools for mainframe data wrangling
+        \item Demonstrating REST API usage for mainframe data exploration [8]
+        \item Teaching visualization techniques for analysis and machine learning preparation [9]
+        \item Promoting data quality governance aligned with banking industry requirements
+    \end{itemize}
+
+    Through these objectives, participants will learn practical approaches to reduce MTTR in network security contexts while maintaining data integrity and stakeholder alignment.
+
+\section{Intended Audience and Required Background}
+    This tutorial is designed for technical professionals working with IBM z/OS mainframe environments [1], particularly those involved in network operations and problem resolution. The content is specifically relevant for:
+
+\subsection{Primary Audience}
+    \begin{itemize}
+        \item Mainframe Subject Matter Experts (SMEs)
+        \item Network Security Specialists
+        \item System Programmers
+        \item Enterprise Architects
+        \item Data Scientists and Data Engineers
+        \item Application Developers
+        \item DevOps Engineers
+    \end{itemize}
+
+\subsection{Secondary Audience}
+    \begin{itemize}
+        \item IT Operations Managers
+        \item Technical Project Managers
+        \item Quality Assurance Engineers
+        \item Business Analysts working with mainframe data
+    \end{itemize}
+
+\subsection{Required Background}
+    \begin{itemize}
+        \item Basic understanding of mainframe architecture and z/OS concepts
+        \item Familiarity with programming concepts and REST APIs
+        \item Basic knowledge of Python programming language
+        \item Understanding of data analysis fundamentals
+    \end{itemize}
+    
+\subsection{Recommended Experience}
+    \begin{itemize}
+        \item 1+ years working with mainframe systems
+        \item Basic exposure to network security concepts
+        \item Familiarity with command-line interfaces
+        \item Basic understanding of data quality principles
+    \end{itemize}
+    
+No prior experience with machine learning or advanced data analysis is required, though basic statistical knowledge will be helpful.
+
+Note: While the tutorial focuses on IBM z/OS environments [1], the data wrangling principles and methodologies presented are applicable to other large-scale computing environments.
+
+\section{Relevance}
+    This tutorial addresses critical challenges in mainframe environments, particularly within banking and financial services where 45 of the top 50 banks rely on IBM Z platforms [1]. The tutorial's relevance is established through three key factors:
+    \begin{enumerate}
+        \item Growing Demand for Advanced Analytics
+        \begin{enumerate}
+            \item Increasing adoption of data science and machine learning in mainframe environments [2]
+            \item Critical need for automated problem resolution to reduce MTTR
+            \item Evolution of mainframe modernization strategies [11,12,13]
+        \end{enumerate}
+        \item Integration of Modern Tools and Methods
+            \begin{enumerate}
+            \item Emergence of open-source data science tools in mainframe ecosystems
+            \item Growing adoption of REST APIs for mainframe data access [8]
+            \item Need for standardized data preparation methodologies for machine learning applications
+            \item Integration of user experience methods for improved stakeholder alignment [3]
+        \end{enumerate}
+        \item Data Quality Challenges
+        \begin{enumerate}
+            \item 91\% of studied mainframe professionals report data quality issues
+            \item Persistent challenges in network security problem resolution [6]
+            \item Critical need for reliable data in banking operations
+            \item Impact of data-driven and communication-driven failures on MTTR [3]
+        \end{enumerate}            
+    \end{enumerate}
+
+The tutorial directly addresses these challenges by:
+\begin{itemize}
+    \item Providing practical methods for improving data quality
+    \item Demonstrating integration of modern tools with mainframe systems
+    \item Teaching effective stakeholder communication techniques
+    \item Presenting real-world examples from banking sector applications
+\end{itemize}
+
+This comprehensive approach supports the mainframe community's evolution toward data-driven operations while maintaining the reliability and security requirements of large-scale enterprise computing [7].
+
+\section{Format and Duration}
+This tutorial consists of a 40-minute lecture that includes a guided demonstration. The lecture provides a tools-based approach to solving data quality challenges in mainframe environments.
+\begin{itemize}
+    \item Format: lecture, demonstration, code notebook
+    \item Intended duration: 40 minutes
+\end{itemize}
+
+\section{Tutorial Outline}
+Tutorial Outline (40 minutes):
+\begin{itemize}
+    \item Introduction (5 min)
+    \begin{itemize}
+        \item Research context and findings
+        \item Audience background assessment
+    \end{itemize}
+    \item Core Concepts (10 min)
+    \begin{itemize}
+        \item Data quality in mainframe environments
+        \item Stakeholder alignment methods
+    \end{itemize}
+    \item Hands-on Demonstration (15 min)
+    \begin{itemize}
+        \item Data wrangling with VS Code/Jupyter
+        \item Mainframe API integration
+        \item Data visualization techniques
+    \end{itemize}
+    \item Summary and Implications (5 min)
+        \begin{itemize}
+            \item Best practices
+            \item Implementation strategies
+        \end{itemize}
+    \item Q\&A Session (5 min)
+\end{itemize}
+
+Note: Timing may be adjusted based on audience needs and technical requirements.
+
+\section{Key Learning Objectives}
+The participants can expect to learn the following:
+\begin{itemize}
+    \item \textbf{Stakeholder Alignment:} Participants will learn to apply user experience research methods to effectively identify, communicate, and validate business requirements for mainframe data initiatives, reducing communication-driven failures in network security problem resolution.
+    \item \textbf{Data Quality Enhancement:} Participants will gain hands-on experience using VS Code, Jupyter Notebooks, and Python to prepare, explore, and transform mainframe network data through REST APIs, addressing the data quality issues reported by 91% of research participants.
+    \item \textbf{Practical Implementation:} Participants will learn to apply data wrangling techniques and visualization methods using a combination of mainframe APIs and open-source data science tools.
+\end{itemize}
+
+\section{Presenter's Bio}
+Joshua Powell, Staff Software Engineer at Broadcom's Mainframe Software Division, brings extensive experience in enterprise data systems and artificial intelligence to mainframe modernization. His work spans government agencies, Honeywell AI's Innovation team, and founding the data science venture Viable Industries. At Broadcom, Joshua leads research on improving mainframe data quality and accessibility, in addition to conducting studies with mainframe customers to improve onboarding experiences. His current focus combines user experience methodologies with data science to reduce friction in the adoption of modern mainfra me systems.
+
+\section{Tutorial History}
+    The tutorial builds upon an earlier presentation prepared for:
+    \begin{enumerate}
+        \item 2023 Mainframe Technical Exchange Virtual
+        \item 2021 Mainframe Technical Exchange Virtual
+    \end{enumerate}
+
+\section{Technical Requirements}
+    Audience members wishing to follow along should prepare their laptops with an up to date version of Visual Studio Code (Microsoft v2024+), Jupyter (Microsoft v2024+), Python v3+, and Python Libraries including Requests, Pandas, and MatPlotLib.
+
+
+\section{Acknowledgments}
+    This work has been entirely supported by the Broadcom Mainframe Software Division.
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\begin{thebibliography}{11}
+    \bibitem[1]{}
+    IBM (International Business Machines Corporation). (2023). IBM 2023 Annual Report.
+    
+    \bibitem[2]{}
+    Wishart-Smith, H. (2024, November 13). Mainframes: the backbone of the worldwide economy. Forbes.
+    
+    \bibitem[3]{}
+    Ryseff, J., de Bruhl, B., \& Newberry, S. J. (2024). The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed: Avoiding the Anti-Patterns of AI.
+    
+    \bibitem[4]{}
+    IBM z/OS operating system. (Accessed: October 28, 2024). https://www.ibm.com/products/zos 
+    
+    \bibitem[5]{}
+    Mcgregor, S. E. (2022). Practical Python Data Wrangling and Data Quality. http://oreilly.com
+    
+    \bibitem[6]{}
+    Powell, J.I., Broadcom Mainframe Software Division, Internal Study, April 2024
+    
+    \bibitem[7]{}
+    Alam, A., Bales, R., Dumir, V., Kunze, N., Li, J., Mishra, S., Rivera, E., Wan, M., \& Yu, Y. (2024). Turning Data into Insight with Machine Learning for IBM z/OS (First). International Business Machines Corporation.
+    
+    \bibitem[8]{}
+    Broadcom Mainframe Developer Portal. (Accessed: October 28, 2024). https://integration.mainframe.broadcom.com/
+    
+    \bibitem[9]{}
+    Harrell, M. (2024). Mainframe Application Developer Study.
+    
+    \bibitem[10]{}
+    Kanvar, V., Tamilselvam, S., \& Raghunath, K. N. (2024, August 8). Enabling communication via APIs for mainframe applications. arXiv.org. https://arxiv.org/abs/2408.04230
+    
+    \bibitem[11]{}
+    Dau, A. T., V., Dao, H. T., Nguyen, A. T., Tran, H. T., Nguyen, P. X., \& Bui, N. D. Q. (2024, August 5). XMainframe: a large language model for mainframe modernization. arXiv.org. https://arxiv.org/abs/2408.04660
+    
+    \bibitem[12]{}
+    Raju, J., Modernizing Mainframe Workloads in Banking: Embracing the Power of Hyperscalers, International Journal of Computer Engineering and Technology (IJCET), 15(5), 2024, pp. 366-374.
+    
+    \bibitem[13]{}
+    Raju, J., AI-Driven Transformation of Mainframe Environments: A Comprehensive Framework for Operational Resilience, International Journal of Engineering and Technology Research (IJETR), 9(2), 2024, pp. 420–433.
+
+\end{thebibliography}
+
+\section{Disclaimer}
+    Certain information in this presentation may outline Broadcom’s general product direction.  This presentation shall not serve to (i) affect the rights and/or obligations of Broadcom or its licensees under any existing or future license agreement or services agreement relating to any Broadcom software product; or (ii) amend any product documentation or specifications for any Broadcom software product. This presentation is based on current information and resource allocations as of November 6, 2024, and is subject to change or withdrawal by Broadcom at any time without notice.  The development, release and timing of any features or functionality described in this presentation remain at Broadcom’s sole discretion.
+    
+    Notwithstanding anything in this presentation to the contrary, upon the general availability of any future Broadcom product release referenced in this presentation, Broadcom may make such release available to new licensees in the form of a regularly scheduled major product release. Such release may be made available to licensees of the product who are active subscribers to Broadcom maintenance and support, on a when and if-available basis. The information in this presentation is not deemed to be incorporated into any contract.
+    
+    THIS PRESENTATION IS FOR YOUR INFORMATIONAL PURPOSES ONLY. Broadcom assumes no responsibility for the accuracy or completeness of the information. TO THE EXTENT PERMITTED BY APPLICABLE LAW, BROADCOM PROVIDES THIS DOCUMENT “AS IS” WITHOUT WARRANTY OF ANY KIND, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT.  In no event will Broadcom be liable for any loss or damage, direct or indirect, in connection with this presentation, including, without limitation, lost profits, lost investment, business interruption, goodwill, or lost data, even if Broadcom is expressly advised in advance of the possibility of such damages.
+
+%%
+\end{document}
+\endinput
+%%
+%% End of file `main.tex'.
