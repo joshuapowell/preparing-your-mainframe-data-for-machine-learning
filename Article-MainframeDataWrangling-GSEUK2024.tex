@@ -1,14 +1,26 @@
 \documentclass[a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{verbatim}
+\immediate\write18{texcount -tex -sum  \jobname.tex > \jobname.wordcount.tex}
 
-\usepackage{StyleGuide}
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
 
 \title{Mainframe Data Wrangling: Preparing Your Data for Use in Machine Learning Models }
-
 \author{Joshua Powell \\
-  Pittsburgh, PA \\
-  {\tt joshua.powell@broadcom.com} \\}
-
-\institution{Broadcom}
+        \small Broadcom \\
+        \small joshua.powell@broadcom.com \\
+}
+\date{} % Comment this line to show today's date
 
 \begin{document}
 \maketitle
@@ -21,7 +33,7 @@
     Analysis revealed that 91\% of participants [5] encountered data quality or completeness issues that impeded network problem resolution. This tutorial demonstrates how end-users can leverage exploratory data analysis techniques [6], mainframe data APIs [7], and open source data science tools [8] to prepare data for advanced analytics and machine learning applications. The presented methodology aims to reduce MTTR by addressing identified data-driven and communication-driven failure points [9], with specific focus on network security use cases [10-13].
 \end{abstract}
 
-\textbf{Keywords: }Data Engineering, Data Wrangling, API Usability, API Onboarding, Mainframe, Large-scale Computing, Machine Learning
+\keywords{Data Engineering, Data Wrangling, API Usability, Data Visualization, Mainframe, Large-scale Computing, Machine Learning}
 
 \section{Tutorial Aims and Objectives}
     Data wrangling enables organizations to transform raw mainframe data into actionable insights that can reduce mean-time-to-resolution (MTTR) in critical banking operations [5]. This tutorial addresses the challenges identified through our research with eighteen mainframe professionals across three roles: SMEs, individual contributors, and people managers.
@@ -140,7 +152,7 @@ This tutorial consists of a 40-minute lecture that includes a guided demonstrati
 \end{itemize}
 
 \section{Tutorial Outline}
-Tutorial Outline (40 minutes):
+Tutorial Outline[15] (40 minutes):
 \begin{itemize}
     \item Introduction (5 min)
     \begin{itemize}
@@ -193,6 +205,13 @@ Joshua Powell, Staff Software Engineer at Broadcom's Mainframe Software Division
 \section{Acknowledgments}
     This work has been entirely supported by the Broadcom Mainframe Software Division.
 
+\section{Disclaimer}
+    Certain information in this presentation may outline Broadcom’s general product direction.  This presentation shall not serve to (i) affect the rights and/or obligations of Broadcom or its licensees under any existing or future license agreement or services agreement relating to any Broadcom software product; or (ii) amend any product documentation or specifications for any Broadcom software product. This presentation is based on current information and resource allocations as of November 6, 2024, and is subject to change or withdrawal by Broadcom at any time without notice.  The development, release and timing of any features or functionality described in this presentation remain at Broadcom’s sole discretion.
+    
+    Notwithstanding anything in this presentation to the contrary, upon the general availability of any future Broadcom product release referenced in this presentation, Broadcom may make such release available to new licensees in the form of a regularly scheduled major product release. Such release may be made available to licensees of the product who are active subscribers to Broadcom maintenance and support, on a when and if-available basis. The information in this presentation is not deemed to be incorporated into any contract.
+    
+    THIS PRESENTATION IS FOR YOUR INFORMATIONAL PURPOSES ONLY. Broadcom assumes no responsibility for the accuracy or completeness of the information. TO THE EXTENT PERMITTED BY APPLICABLE LAW, BROADCOM PROVIDES THIS DOCUMENT “AS IS” WITHOUT WARRANTY OF ANY KIND, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT.  In no event will Broadcom be liable for any loss or damage, direct or indirect, in connection with this presentation, including, without limitation, lost profits, lost investment, business interruption, goodwill, or lost data, even if Broadcom is expressly advised in advance of the possibility of such damages.
+
 %%
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
@@ -236,14 +255,14 @@ Joshua Powell, Staff Software Engineer at Broadcom's Mainframe Software Division
     \bibitem[13]{}
     Raju, J., AI-Driven Transformation of Mainframe Environments: A Comprehensive Framework for Operational Resilience, International Journal of Engineering and Technology Research (IJETR), 9(2), 2024, pp. 420–433.
 
+    \bibitem[14]{}
+    Powell, J. I. \& Broadcom Mainframe Software. (2024, November 6). Mainframe data wrangling: Preparing your mainframe data for use in machine learning models. [Conference Tutorial]. Guide Share Europe (GSE) UK Conference 2024, - United Kingdom.
+
+    \bibitem[15]{}
+    Powell, J. I. (2024, November 6). Mainframe Data Wrangling: Preparing Your Mainframe Data for Machine Learning. GitHub. https://github.com/joshuapowell/preparing-your-mainframe-data-for-machine-learning
+    
 \end{thebibliography}
 
-\section{Disclaimer}
-    Certain information in this presentation may outline Broadcom’s general product direction.  This presentation shall not serve to (i) affect the rights and/or obligations of Broadcom or its licensees under any existing or future license agreement or services agreement relating to any Broadcom software product; or (ii) amend any product documentation or specifications for any Broadcom software product. This presentation is based on current information and resource allocations as of November 6, 2024, and is subject to change or withdrawal by Broadcom at any time without notice.  The development, release and timing of any features or functionality described in this presentation remain at Broadcom’s sole discretion.
-    
-    Notwithstanding anything in this presentation to the contrary, upon the general availability of any future Broadcom product release referenced in this presentation, Broadcom may make such release available to new licensees in the form of a regularly scheduled major product release. Such release may be made available to licensees of the product who are active subscribers to Broadcom maintenance and support, on a when and if-available basis. The information in this presentation is not deemed to be incorporated into any contract.
-    
-    THIS PRESENTATION IS FOR YOUR INFORMATIONAL PURPOSES ONLY. Broadcom assumes no responsibility for the accuracy or completeness of the information. TO THE EXTENT PERMITTED BY APPLICABLE LAW, BROADCOM PROVIDES THIS DOCUMENT “AS IS” WITHOUT WARRANTY OF ANY KIND, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT.  In no event will Broadcom be liable for any loss or damage, direct or indirect, in connection with this presentation, including, without limitation, lost profits, lost investment, business interruption, goodwill, or lost data, even if Broadcom is expressly advised in advance of the possibility of such damages.
 
 %%
 \end{document}
