@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Powell, J. I. \& Broadcom Mainframe Software. (2024, November 6). Mainframe data wrangling: Preparing your mainframe data for use in machine learning models. [Conference Tutorial]. Guide Share Europe (GSE) UK Conference 2024, - United Kingdom., DOI: 00.0000/00000000.0000.0000000"
+authors:
+- family-names: "Powell"
+  given-names: "J.I."
+  orcid: "https://orcid.org/0000-0002-0894-2399"
+title: "Mainframe data wrangling: Preparing your mainframe data for use in machine learning models"
+version: 0.0.1
+doi: "00.0000/00000000.0000.0000000"
+date-released: 2024-11-06
+url: "https://github.com/joshuapowell/preparing-your-mainframe-data-for-machine-learning"
